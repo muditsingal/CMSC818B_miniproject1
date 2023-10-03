@@ -23,15 +23,16 @@ Modern neural networks are composed of billions of parameters that are very data
 
 Generative AI paves the way to generate realistic examples in high-dimensional spaces such as RGB images or 3-dimensional paths. The talk makes an important contribution of using generative AI to generate realistic but improbable pedestrian behavior. This has been accomplished by modifying the architecture of the generator of a traditional GAN where a single neural network is used to produce the output. Here, an encoder and a decoder are used to make up the generator network. An additional embedding is generated from the desired distribution and passed to the decoder that generates an output sample (as seen in fig. 1). By using this method, the authors improve the chances of obtaining ‘valid’ samples that will be more suitable candidates for training the underlying neural network.
 
+![Encoder Decoder GAN](images/fig1_cruise.png)
 <p align="center">
   ![Encoder Decoder GAN](images/fig1_cruise.png)
   Fig 1: Modified GAN architecture
-<\p>
+</p>
 
 Another important contribution in the area of continual learning of neural networks has been made. In most approaches, access to old data (not for retraining, but for evaluation) is often required or the approach is not scalable to multiple fine-tuning stages. In the proposed method, the weight updates are made based on only the new data but using the original checkpoint model’s weights as reference. An example can be seen in fig. 2, where the weight updates are calculated by a combination of gradients obtained from the current model and new data and the difference between the current model and check-pointed model. Using this method, the need to store old data is eliminated while ensuring that the model does not ‘forget’ the old data.
 
-<p>
-  ![PC grad idea](images/fig2_cruise.png)
+![PC grad idea](images/fig2_cruise.png)
+<p aligh="center">
   Fig 2: The idea of PC grad
 </p>
 
