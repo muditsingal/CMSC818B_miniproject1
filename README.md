@@ -25,8 +25,14 @@ Generative AI paves the way to generate realistic examples in high-dimensional s
 
 ![Encoder Decoder GAN](images/fig1_cruise.png)
 <p align="center">
-  ![Encoder Decoder GAN](images/fig1_cruise.png)
   Fig 1: Modified GAN architecture
+</p>
+
+<p align="center">
+  <img src="images/fig1_cruise.png" alt="Encoder Decoder GAN" width="400" />
+</p>
+<p align="center">
+  <em>Fig 1: Modified GAN architecture</em>
 </p>
 
 Another important contribution in the area of continual learning of neural networks has been made. In most approaches, access to old data (not for retraining, but for evaluation) is often required or the approach is not scalable to multiple fine-tuning stages. In the proposed method, the weight updates are made based on only the new data but using the original checkpoint model’s weights as reference. An example can be seen in fig. 2, where the weight updates are calculated by a combination of gradients obtained from the current model and new data and the difference between the current model and check-pointed model. Using this method, the need to store old data is eliminated while ensuring that the model does not ‘forget’ the old data.
@@ -34,6 +40,13 @@ Another important contribution in the area of continual learning of neural netwo
 ![PC grad idea](images/fig2_cruise.png)
 <p aligh="center">
   Fig 2: The idea of PC grad
+</p>
+
+<p align="center">
+  <img src="images/fig2_cruise.png" alt="PC grad idea" width="400" />
+</p>
+<p align="center">
+  <em>Fig. 2: The idea of PC grad</em>
 </p>
 
 I believe that the presentation fits well in the context of scalable AI. The authors not only introduce an important issue when dealing with scalable autonomous driving systems, but present interesting approaches towards solving it. The idea of generative AI being used to generate training samples in the context of robotics is gaining traction. It is being used in CNNs, path planning, RL-based control systems, and as already mentioned, in autonomous driving systems. This is important because collecting data for robotic systems is often a laborious task and consists of data from multiple sensors. Thus, collecting real-world data for unlikely scenarios may not be feasible for many applications. If generative AI can help in generating realistic data that is well diversified, the time-to-market can be significantly improved while ensuring that the model can generalize to complicated scenarios. However, a quantitative quality-of-sample should be established for applicability of the proposed method in real-world scenarios.
