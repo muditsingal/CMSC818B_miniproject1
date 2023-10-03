@@ -19,9 +19,7 @@ _Talk by: Yuning Chai (Head of AI Research at Cruise)_
 
 Dr. Chai talks about how generating adversarial scenarios using GANs can help in providing additional learning examples for the agent. He addresses how generative AI can be used to provide a scalable technology that can generate good training data. This is essential to help in expanding the categories of scenarios that are available as training data. 
 
-<div style="text-align: justify;">
-  Modern neural networks are composed of billions of parameters that are very data hungry and need large amounts of data (often in terabytes or even petabytes) to generalize well. The talk  proposes a method of multi-pass learning in which we can eliminate the need of storing old data without sacrificing the performance metrics on old data. This helps in solving the scalability issue in continual learning in AI models.
-</div>
+Modern neural networks are composed of billions of parameters that are very data hungry and need large amounts of data (often in terabytes or even petabytes) to generalize well. The talk  proposes a method of multi-pass learning in which we can eliminate the need of storing old data without sacrificing the performance metrics on old data. This helps in solving the scalability issue in continual learning in AI models.
 
 Generative AI paves the way to generate realistic examples in high-dimensional spaces such as RGB images or 3-dimensional paths. The talk makes an important contribution of using generative AI to generate realistic but improbable pedestrian behavior. This has been accomplished by modifying the architecture of the generator of a traditional GAN where a single neural network is used to produce the output. Here, an encoder and a decoder are used to make up the generator network. An additional embedding is generated from the desired distribution and passed to the decoder that generates an output sample (as seen in fig. 1). By using this method, the authors improve the chances of obtaining ‘valid’ samples that will be more suitable candidates for training the underlying neural network.
 
