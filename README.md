@@ -5,6 +5,11 @@ _This workshop presents good literature related to solving challenging problems 
 <br>
 [ScalableAD website](https://sites.google.com/view/icra2023av)
 
+The ICRA workshop on scalable autonomous driving addresses some of the biggest and complex challenges that are being faced while developing autonomous vehicles. The issue of scalability has been considered from various viewpoints in robotics in this workshop. The viewpoints span from issues in generating rare driving scenarios for training autonomous agents, developing new perception techniques that can fuse multiple sensor information, to connected autonomous vehicles (AVs).
+
+The scalability issue of AVs  is of utmost importance if we wish to deploy them at scale in multiple cities across the globe. As we find more efficient methods for solving different problems faced by AVs, such as generating BEV (Bird’s Eye View) by fusing multiple on-board sensors, our ability to test and enhance such methods should also improve. This is only possible if we consciously push towards more scalable algorithms and techniques that are designed for AVs. By having scalable technologies, we can ensure that the solutions devised are globally optimum and generalize well across different scenarios that the autonomous agent may face while driving.
+
+
 Demo equation: 
 <br/>
 ![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
