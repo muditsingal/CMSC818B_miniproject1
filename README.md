@@ -25,6 +25,7 @@ Generative AI paves the way to generate realistic examples in high-dimensional s
 
 <p align="center">
   <img src="images/fig1_cruise.png" alt="Encoder Decoder GAN" width="600" />
+  <br/>
   <em>Fig 1: Modified GAN architecture</em>
 </p>
 
@@ -33,6 +34,7 @@ Another important contribution in the area of continual learning of neural netwo
 
 <p align="center">
   <img src="images/fig2_cruise.png" alt="PC grad idea" width="600" />
+  <br/>
   <em>Fig. 2: The idea of PC grad</em>
 </p>
 
