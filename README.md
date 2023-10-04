@@ -9,15 +9,9 @@ The ICRA workshop on scalable autonomous driving addresses some of the biggest a
 
 The scalability issue of AVs  is of utmost importance if we wish to deploy them at scale in multiple cities across the globe. As we find more efficient methods for solving different problems faced by AVs, such as generating BEV (Bird’s Eye View) by fusing multiple on-board sensors, our ability to test and enhance such methods should also improve. This is only possible if we consciously push towards more scalable algorithms and techniques that are designed for AVs. By having scalable technologies, we can ensure that the solutions devised are globally optimum and generalize well across different scenarios that the autonomous agent may face while driving.
 
-Index:
-<ol>
-  <li>
-    [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images](#topic1)
-  </li>
-  <li>
-    [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
-  </li>
-</ol>
+### Index:
+1. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images](#topic1)
+2. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
 
 Demo equation: 
 <br/>
@@ -40,8 +34,8 @@ I also believe that the authors provide a good starting point for further resear
 Open challenges: Baseline, hence computational performance needs to be analyzed. For real time applications, the algorithm should be computationally efficient to allow deployment on-board actual AVs. Thus, a study should be conducted that assesses the latency introduced by the proposed algorithm and what potential improvements can be made to make it more efficient. Further, the authors only consider 5 classes for semantic segmentation and only 3 levels in height map generation. This level of granularity may be insufficient for deployment of the algorithm in complex and rich city environments. Thus, a more comprehensive class set can be explored.
 
 
-### <a name="topic2">Topic 2: Scaling AV through Adversarial Scenario Generation and Continual Learning.</a>
-<br/>
+### <a name="topic2"></a>Topic 2: Scaling AV through Adversarial Scenario Generation and Continual Learning.
+<br>
 _Talk by: Yuning Chai (Head of AI Research at Cruise)_
 
 Dr. Chai talks about how generating adversarial scenarios using GANs can help in providing additional learning examples for the agent. He addresses how generative AI can be used to provide a scalable technology that can generate good training data. This is essential to help in expanding the categories of scenarios that are available as training data. 
