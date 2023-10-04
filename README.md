@@ -35,7 +35,6 @@ Open challenges: Baseline, hence computational performance needs to be analyzed.
 
 
 ### <a name="topic2"></a>Topic 2: Scaling AV through Adversarial Scenario Generation and Continual Learning.
-<br>
 _Talk by: Yuning Chai (Head of AI Research at Cruise)_
 
 Dr. Chai talks about how generating adversarial scenarios using GANs can help in providing additional learning examples for the agent. He addresses how generative AI can be used to provide a scalable technology that can generate good training data. This is essential to help in expanding the categories of scenarios that are available as training data. 
