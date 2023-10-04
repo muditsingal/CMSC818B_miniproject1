@@ -13,6 +13,7 @@ The scalability issue of AVs  is of utmost importance if we wish to deploy them 
 1. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images](#topic1)
 2. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
 3. [A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios](#topic3)
+4. [References](#refs)
 
 
 Demo equation: 
@@ -84,6 +85,7 @@ Another vital issue is that only one sensor, i.e. lidar, is being used. If the s
 In CAVs, network latency is an important factor. If there is a significant delay in transporting critical information, this could lead to catastrophic outcomes. While the authors propose data compression, a network latency performance metric should be measured to ensure optimum performance for critical operations.
 
 
+### <a name="refs"></a>References:
 <ol>
   <li>
     <a name="ref1"></a>Samani, Ekta U., Feng Tao, Harshavardhan R. Dasari, Sihao Ding, and Ashis G. Banerjee. "F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images for Automated Driving." arXiv preprint arXiv:2303.03651 (2023).
