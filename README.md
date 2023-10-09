@@ -14,7 +14,8 @@ The scalability issue of AVs  is of utmost importance if we wish to deploy them 
 2. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
 3. [A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios](#topic3)
 4. [Label efficient Machine Learning for Autonomous Driving](#topic4)
-5. [References](#refs)
+5. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images for Automated Driving](#topic5)
+6. [References](#refs)
 
 
 Demo equation: 
@@ -101,6 +102,9 @@ Further, measurable improvement in the case of pedestrian and vehicle detection 
 
 The potential challenges or improvements in the proposed algorithms are mainly related to scalability issues and timing constraints. While MoDAR is an innovative approach, it requires extrapolation of sequences of 3D point clouds. This is bound to be computationally expensive and may not be suitable for real-time use cases and in time-constrained environments, such as emergency driving maneuvers required in real-life driving scenarios. Thus, further improvements in computational efficiency can be made. For the case of label efficient machine learning, a huge scope in labeling accuracy exists, as the objective is to beat the human expert. Currently, no such algorithm exists.
 
+### <a name="topic5"></a>Topic 5: BEVFusion: Multi-task Multi-sensor fusion with Unified Bird’s Eye View representation.[5](#ref5)
+
+
 
 ### <a name="refs"></a>References:
 <ol>
@@ -115,6 +119,9 @@ The potential challenges or improvements in the proposed algorithms are mainly r
   </li>
   <li>
     <a name="ref4"></a>Talk 2: Label efficient Machine Learning for Autonomous Driving by Dr. Yin Zhou. ScalableAD workshop ICRA'2023.
+  </li>
+  <li>
+    <a name="ref5"></a>Liu, Zhijian, et al. "Bevfusion: Multi-task multi-sensor fusion with unified bird's-eye view representation." 2023 IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2023.
   </li>
 </ol>
 
