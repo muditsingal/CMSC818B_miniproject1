@@ -13,7 +13,8 @@ The scalability issue of AVs  is of utmost importance if we wish to deploy them 
 1. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images](#topic1)
 2. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
 3. [A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios](#topic3)
-4. [References](#refs)
+4. [Label efficient Machine Learning for Autonomous Driving](#topic4)
+5. [References](#refs)
 
 
 Demo equation: 
@@ -84,6 +85,22 @@ Another vital issue is that only one sensor, i.e. lidar, is being used. If the s
 
 In CAVs, network latency is an important factor. If there is a significant delay in transporting critical information, this could lead to catastrophic outcomes. While the authors propose data compression, a network latency performance metric should be measured to ensure optimum performance for critical operations.
 
+### <a name="topic4"></a>Topic 4: Label efficient Machine Learning for Autonomous Driving [4](#ref4)
+
+_Talk by Yin Zhou (Senior Staff Research Scientist at Waymo)_
+
+Accurate labeling is critical for training machine learning models that behave in a predictable manner and produce the desired outputs. Being a critical component of machine learning, it is usually carried out manually, where human experts spend a huge amount of time on annotating and labeling different classes of data such as pixel level segmentation for semantic segmentation tasks. For large datasets, the cost of labeling data grows exponentially, limiting the size of datasets that can be produced for training complex neural networks. Thus, to help alleviate this scalability problem, many auto labeling algorithms are being developed that utilize neural networks to automatically and accurately annotate the data from different categories of data.
+
+In the talk by Dr. Yin Zhou, senior staff research scientist at Waymo, about label efficient machine learning for autonomous driving, he talks about the Waymo open motion dataset. ML models trained using this dataset can match the performance of common use cases when comparing with 100% labeled data, however, there is a significant performance gap when compared for rare cases such as large vehicles (trucks, buses). This performance gap is bridged by using a technique called rare-example mining, in which rare data points are sent back to humans to label manually. To quantize the rareness of an object, a probability density of samples is computed, and the samples with low probability are considered to be more rare and sent to humans for manual labeling. In this way, we can get better labeling accuracy for all use cases and frees humans from repeated labeling of common cases (cars, pedestrians). This technique improves trained model accuracy by ~40% for long-tail cases.
+
+The talk also talks about how the addition of rare examples helps in improving data distribution and reducing epistemic uncertainty but not improving aleatoric uncertainty as these tasks are hard even for humans. To reduce aleatoric uncertainty, a novel motion forecasting algorithm is proposed which they have named MoDAR (Motion Forecasting for 3D Object Detection in Point Cloud Sequences). In this algorithm, previous examples where object detection was successful are used to extrapolate points from possible motion paths. Several motion paths are considered based on common vehicle motion hypotheses used by Waymo. This algorithm helps in adding the missing points in 3D point cloud data due to occlusion or external sensor blockage. Thus, SWFormer’s (Sparse Window Transformer for 3D object detection in point clouds) performance with MoDAR outperforms current state-of-the-art consistently (3-7% improvement L3 APH metric for pedestrian and vehicle detection).
+
+I believe that both the topics touched by Dr. Yin Zhou solves important problems for deploying machine learning for autonomous vehicles at scale. Research on auto-labeling algorithms is being done in multiple fields, not just limited to robotics. The proposed method comes close to matching the performance of labeling using human experts, and further research in the area could help in surpassing human experts as seen in reinforcement learning cases.
+
+Further, measurable improvement in the case of pedestrian and vehicle detection over current state-of-the-art is a big accomplishment. The successful implementation of augmented point cloud using historical detections is a big step towards improving the safety of autonomous vehicles. This is similar to how humans reason. If a smaller vehicle is occluded by a larger vehicle or static obstacles, we try to keep a mental picture of where they might end up after the next 5-10 seconds. 
+
+The potential challenges or improvements in the proposed algorithms are mainly related to scalability issues and timing constraints. While MoDAR is an innovative approach, it requires extrapolation of sequences of 3D point clouds. This is bound to be computationally expensive and may not be suitable for real-time use cases and in time-constrained environments, such as emergency driving maneuvers required in real-life driving scenarios. Thus, further improvements in computational efficiency can be made. For the case of label efficient machine learning, a huge scope in labeling accuracy exists, as the objective is to beat the human expert. Currently, no such algorithm exists.
+
 
 ### <a name="refs"></a>References:
 <ol>
@@ -91,10 +108,13 @@ In CAVs, network latency is an important factor. If there is a significant delay
     <a name="ref1"></a>Samani, Ekta U., Feng Tao, Harshavardhan R. Dasari, Sihao Ding, and Ashis G. Banerjee. "F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images for Automated Driving." arXiv preprint arXiv:2303.03651 (2023).
   </li>
   <li>
-    <a name="ref2"></a>Talk 1: Scaling AV Across the US by Dr. Yuning Chai. 
+    <a name="ref2"></a>Talk 1: Scaling AV Across the US by Dr. Yuning Chai. ScalableAD workshop ICRA'2023.
   </li>
   <li>
     <a name="ref3"></a>Leandro Parada, Hanlin Tian, Jose Escribano, and Panagiotis Angeloudis. "A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios.".
+  </li>
+  <li>
+    <a name="ref4"></a>Talk 2: Label efficient Machine Learning for Autonomous Driving by Dr. Yin Zhou. ScalableAD workshop ICRA'2023.
   </li>
 </ol>
 
