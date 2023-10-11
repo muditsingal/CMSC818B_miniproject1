@@ -10,13 +10,30 @@ The ICRA workshop on scalable autonomous driving addresses some of the biggest a
 The scalability issue of AVs  is of utmost importance if we wish to deploy them at scale in multiple cities across the globe. As we find more efficient methods for solving different problems faced by AVs, such as generating BEV (Bird’s Eye View) by fusing multiple on-board sensors, our ability to test and enhance such methods should also improve. This is only possible if we consciously push towards more scalable algorithms and techniques that are designed for AVs. By having scalable technologies, we can ensure that the solutions devised are globally optimum and generalize well across different scenarios that the autonomous agent may face while driving.
 
 ### Index:
-1. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images](#topic1)
-2. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
-3. [A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios](#topic3)
-4. [Label efficient Machine Learning for Autonomous Driving](#topic4)
-5. [BEVFusion: Multi-task Multi-sensor fusion with Unified Bird’s Eye View representation](#topic5)
-6. [Concluding Remarks](#conclusion)
-7. [References](#refs)
+1. [Open Challenges in Autonomous Driving](#oc)
+2. [Examples of how discussed topics are related to decision making in robotics](#eg)
+3. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images](#topic1)
+4. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
+5. [A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios](#topic3)
+6. [Label efficient Machine Learning for Autonomous Driving](#topic4)
+7. [BEVFusion: Multi-task Multi-sensor fusion with Unified Bird’s Eye View representation](#topic5)
+8. [Concluding Remarks](#conclusion)
+9. [References](#refs)
+
+
+### <a name="oc"></a>Open Challenges in Autonomous Driving.
+
+Some of the major challenges in large scale deployment of AVs today are handling large amounts of data from multiple sensors, ensuring sample diversity for good generalizability of trained model, vehicle-to-vehicle communication, and handling occluded intersections.
+
+Modern AVs have a host of multi-modal sensors ranging from 2D cameras to LiDAR. Such a large array of sensors is required to introduce fail-safe redundancies in the system. While this approach does ensure safe operation of AVs in case of sensor failure, it also warrants the development of computationally efficient algorithms. Such algorithms should be capable of generating a representation that can then be used by other latency-critical algorithms, such as the path planning module. The literature discussed in later chapters goes over construction of such representations, which help in preserving semantic and geometric information. This property ensures usability in applications such as 3D object detection and semantic segmentation.
+
+Another open problem is handling occlusion. There are many approaches that are being studied. Most of them involve some form of learning, such as reinforcement learning and learning from demonstrations. However, these approaches lack the element of communication. If multiple AVs at different parts of an intersection share their representations of their surroundings, each AV can benefit from a bigger picture of the environment. The major issues of such a system are bandwidth-efficient data representation techniques that can minimize network latency for real-time applications.
+
+### <a name="eg"></a>Examples of how discussed topics are related to decision making in robotics
+
+To make good decisions, robots or agents must have access to reliable information about their surroundings and their state. One topic that will expand upon this area is bird’s eye view (BEV) generation using surround-view fisheye cameras. BEV is ideal for analyzing vehicle motion using sequences of images. Thus, accurate BEVs are essential for good vehicle motion profiling and good robot decision making.
+
+Further, for learning based approaches, well distributed samples, covering a large range of scenarios, are necessary for good generalization. A good example of how this could be difficult to ensure is rare pedestrian behavior. A pedestrian may decide to stop and go back to where he/she came from or stumble and deviate from a straight path. These cases may be hard to capture, model, or program explicitly. Thus, by using adversarial scenario generation, GANs can be used to generate realistic rare pedestrian behaviors that ensure that the underlying neural network has access to well distributed samples that cover a wide range of examples.
 
 
 ### <a name="topic1"></a>Topic 1: F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images for Automated Driving.[1](#ref1)
