@@ -14,8 +14,9 @@ The scalability issue of AVs  is of utmost importance if we wish to deploy them 
 2. [Scaling AV through Adversarial Scenario Generation and Continual Learning](#topic2)
 3. [A V2V-based Collaborative Navigation Framework for Connected Autonomous Vehicles in Occluded Scenarios](#topic3)
 4. [Label efficient Machine Learning for Autonomous Driving](#topic4)
-5. [F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images for Automated Driving](#topic5)
-6. [References](#refs)
+5. [BEVFusion: Multi-task Multi-sensor fusion with Unified Bird’s Eye View representation](#topic5)
+6. [Concluding Remarks](#conclusion)
+7. [References](#refs)
 
 
 ### <a name="topic1"></a>Topic 1: F2BEV: Bird's Eye View Generation from Surround-View Fisheye Camera Images for Automated Driving.[1](#ref1)
@@ -80,7 +81,7 @@ Another vital issue is that only one sensor, i.e. lidar, is being used. If the s
 
 In CAVs, network latency is an important factor. If there is a significant delay in transporting critical information, this could lead to catastrophic outcomes. While the authors propose data compression, a network latency performance metric should be measured to ensure optimum performance for critical operations.
 
-### <a name="topic4"></a>Topic 4: Label efficient Machine Learning for Autonomous Driving [4](#ref4)
+### <a name="topic4"></a>Topic 4: Label efficient Machine Learning for Autonomous Driving. [4](#ref4)
 
 _Talk by Yin Zhou (Senior Staff Research Scientist at Waymo)_
 
@@ -106,6 +107,19 @@ The proposed algorithm, in my opinion, is a suitable candidate for establishing 
 
 Testing of the algorithm has to be carried out on actual hardware on the road to gauge its effectiveness in the real world. Not a lot of information is given about performance of the algorithm when using a combination of sensors other than 2D cameras + LiDAR. Hence, further investigation is needed when performing sensor fusion with sensors such as radars and depth cameras.
 
+### <a name="conclusion"></a>Concluding Remarks
+
+Decision-making in robotics heavily relies on the quality and availability of unbiased and error-free data. If the underlying data accessible to the agent at any given point in time is erroneous, the agent is prone to making faulty decisions and predictions. The primary focus of this study was to explore how existing algorithms could be enhanced or new algorithms developed to ensure the availability of high-quality data for unbiased decision-making. While the majority of the study doesn't directly contribute to decision-making in robotics, one can assert strongly that data is the foundation of decision-making in this field. The study doesn't introduce groundbreaking algorithms that enhance existing decision-making algorithms like PPO (Proximal Policy Optimization). Instead, it presents algorithms designed to assist existing algorithms in making the correct decisions by providing an accurate representation of the vehicle's surroundings.
+
+The proposed algorithms and methods in this study examine data representation from various angles. The major perspectives include:
+
+1. Generating accurate Bird's Eye Views (BEVs) from fewer cameras, reducing the need for expensive LiDARs and eliminating redundancy.
+2. Generating rare driving scenarios using neural networks, scenarios that are challenging to record or program explicitly.
+3. Representing environment scans in a format suitable for quick sharing over a local network of autonomous vehicles (AVs), thus reducing network overhead and improving throughput. Sharing information also aids in obtaining a more comprehensive view of occluded parts of the environment.
+4. Auto-labeling techniques for autonomous driving data to reduce human dependency and expand the size of available training datasets.
+5. Sensor fusion techniques that efficiently create a unified representation of the environment from multi-modal data, suitable for quick decision-making in complex scenarios.
+
+All of these discussions address crucial aspects of data representation and management to enhance decision-making in autonomous vehicles. Ongoing research will further refine these methods and contribute to making autonomous vehicles a universal concept that can be scaled  as needed.
 
 
 ### <a name="refs"></a>References:
