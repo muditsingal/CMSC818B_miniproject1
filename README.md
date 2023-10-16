@@ -1,5 +1,7 @@
 # Mini Project 1 - CMSC818B Decisioin Making for Robotics
 
+### Author: Mudit Singal (msingal@umd.edu)
+
 ## ICRA 2023 Workshop - ScalableAD
 _This workshop presents good literature related to solving challenging problems in Autonomous Driving Systems_
 <br>
