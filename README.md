@@ -1,4 +1,4 @@
-# Mini Project 1 - CMSC818B Decisioin Making for Robotics
+# Mini Project 1 - CMSC818B Decision Making for Robotics
 
 ### Author: Mudit Singal (msingal@umd.edu)
 
